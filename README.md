@@ -7,4 +7,11 @@ Also this repo contains configs files for extra software:
  - flameshot
  - alacritty
 
-And media files (check out cool wallaper image at the dotLocalFolder)
+Media files (check out cool wallaper image at the dotLocalFolder)
+
+Bash executable files:
+ - print_color
+ - sway-launcher-desktop
+
+
+P.s. Use my configs in your own way without any shyness :)
