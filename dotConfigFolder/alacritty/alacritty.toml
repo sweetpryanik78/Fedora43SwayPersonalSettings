@@ -1,0 +1,5 @@
+[general]
+import = ["./themes/monokai_charcoal_white.toml"]
+
+[font]
+size = 15.00

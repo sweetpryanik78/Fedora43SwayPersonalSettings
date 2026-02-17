@@ -1,0 +1,92 @@
+// -*- mode: jsonc -*-
+{
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30,
+    "width": 1920,
+    "spacing": 7, // Gaps between modules
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/scratchpad",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "pulseaudio",
+        "network",
+        "sway/language",
+        "clock",
+        "tray"
+    ],
+
+    // Modules configuration
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+    },
+    "sway/mode": {
+        "format": "<span>{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} ~ {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{title}"
+    },
+    "idle_inhibitor": {
+        "format": "idle? {icon}",
+        "format-icons": {
+            "activated": "NOO!",
+            "deactivated": "Zzzz"
+        }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 12,
+    },
+    "clock": {
+        "interval": 5,
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%d.%m.%Y}",
+        "calendar": {
+            "mode": "month",
+            "weeks-pos": "right",
+            "format": {
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>"
+            }
+        }
+    },
+    "network": {
+        "format-ethernet": "Internet :)",
+        "tooltip-format": "{ifname} via {ipaddr}/{cidr}",
+        "format-linked": "No IP :(",
+        "format-disconnected": "No internet :(",
+    },
+    "pulseaudio": {
+        "scroll-step": 3,
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+}

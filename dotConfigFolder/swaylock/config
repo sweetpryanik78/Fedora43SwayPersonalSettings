@@ -1,0 +1,7 @@
+indicator-radius=125
+color=282828
+scaling=fill
+show-keyboard-layout
+indicator-idle-visible
+ignore-empty-password
+show-failed-attempts
