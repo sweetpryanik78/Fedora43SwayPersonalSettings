@@ -1,3 +1,10 @@
+Tech info (provided with fastfetch):
+OS: Fedora Linux 43 (Sway) x86_64
+Kernel: Linux 6.18.9-200.fc43.x86_64
+Shell: bash 5.3.0
+WM: Sway 1.11 (Wayland)
+
+
 This repo contains configs files for GNU/Linux Fedora Sway 43 distro's components, such as:
  - sway
  - swaylock
